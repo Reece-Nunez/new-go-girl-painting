@@ -1,20 +1,44 @@
 @import "tailwindcss";
 
+@import "@fontsource/poppins"; /* defaults to weight 400 */
+@import "@fontsource/poppins/600.css"; /* optional for semi-bold titles */
+
+html {
+  scroll-behavior: smooth;
+}
+
+.my-masonry-grid {
+  display: -webkit-box; /* Not needed if Tailwind handles modern layouts */
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: -1rem; /* gutter size offset */
+  width: auto;
+}
+.my-masonry-grid_column {
+  padding-left: 1rem; /* gutter size */
+  background-clip: padding-box;
+}
+
+.my-masonry-grid_column > img {
+  margin-bottom: 1rem;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --pink-brand: #e28797;
+  --background: #ededed;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-brand: var(--pink-brand);
+  --font-sans: var(--font-poppins);
+  --font-mono: var(--font-poppins);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #ededed;
     --foreground: #ededed;
   }
 }
@@ -22,5 +46,5 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: poppins, sans-serif;
 }
