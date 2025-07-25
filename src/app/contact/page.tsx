@@ -26,10 +26,29 @@ export default function ContactPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="space-y-6"
-          onSubmit={(e) => {
+          onSubmit={async (e) => {
             e.preventDefault()
-            alert('This form is not wired up yet 😄')
+            const form = e.currentTarget
+            const data = {
+              name: (form.elements.namedItem('name') as HTMLInputElement)?.value || '',
+              email: (form.elements.namedItem('email') as HTMLInputElement)?.value || '',
+              message: (form.elements.namedItem('message') as HTMLTextAreaElement)?.value || '',
+            }
+
+            const res = await fetch('/api/contact', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(data),
+            })
+
+            if (res.ok) {
+              alert('Thanks! Your message was sent ✨')
+              form.reset()
+            } else {
+              alert('Something went wrong. Please try again later.')
+            }
           }}
+
         >
           <div>
             <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
