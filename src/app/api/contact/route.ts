@@ -1,11 +1,10 @@
-
 import { Resend } from 'resend'
 import { NextResponse } from 'next/server'
 
-const resend = new Resend(process.env.RESEND_API_KEY)
-
 export async function POST(req: Request) {
   try {
+    const resend = new Resend(process.env.RESEND_API_KEY)
+
     const body = await req.json()
     const { name, email, message } = body
 
@@ -26,7 +25,6 @@ export async function POST(req: Request) {
       `,
     })
 
-    console.log('Resend response:', data)
     if (error) {
       console.error('Resend error:', error)
       return NextResponse.json({ error }, { status: 500 })
@@ -38,4 +36,3 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 })
   }
 }
-
