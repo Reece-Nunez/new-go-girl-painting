@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { Variants } from 'framer-motion'
 
 const values = [
     {
@@ -17,15 +18,16 @@ const values = [
     },
 ]
 
-const variants = {
+
+const variants: Variants = {
     hidden: { opacity: 0, y: 30 },
-    visible: (i: number) => ({
+    visible: (i: number): any => ({
         opacity: 1,
         y: 0,
         transition: {
             delay: i * 0.2,
             duration: 0.6,
-            ease: [0.42, 0, 0.58, 1], // cubic-bezier for easeOut
+            ease: [0.25, 0.1, 0.25, 1] as [number, number, number, number], // 👈 Fix here
         },
     }),
 }

@@ -53,11 +53,11 @@ export default function Footer() {
                     <ul className="space-y-2 text-sm">
                         <li className="flex items-center gap-2">
                             <FontAwesomeIcon icon={faPhone} className="text-[#e28797]" />
-                            <a href="tel:+14025551234" className="hover:text-[#e28797]">(402) 555-1234</a>
+                            <a href="tel:+14023032541" className="hover:text-[#e28797]">(402) 303-2541</a>
                         </li>
                         <li className="flex items-center gap-2">
                             <FontAwesomeIcon icon={faEnvelope} className="text-[#e28797]" />
-                            <a href="mailto:missy@gogirlpainting.com" className="hover:text-[#e28797]">missy@gogirlpainting.com</a>
+                            <a href="mailto:go-girlpainting@outlook.com" className="hover:text-[#e28797]">go-girlpainting@outlook.com</a>
                         </li>
                         <li className="flex items-center gap-2">
                             <FontAwesomeIcon icon={faLocationDot} className="text-[#e28797]" />
@@ -70,14 +70,8 @@ export default function Footer() {
                 <div>
                     <h4 className="text-pink-700 font-semibold mb-2">Follow Us</h4>
                     <div className="flex gap-4 text-[#e28797] text-xl">
-                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.facebook.com/profile.php?id=100083751551269" target="_blank" rel="noopener noreferrer">
                             <FontAwesomeIcon icon={faFacebookF} className="hover:text-pink-600 transition" />
-                        </a>
-                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-                            <FontAwesomeIcon icon={faInstagram} className="hover:text-pink-600 transition" />
-                        </a>
-                        <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer">
-                            <FontAwesomeIcon icon={faPinterestP} className="hover:text-pink-600 transition" />
                         </a>
                     </div>
                 </div>

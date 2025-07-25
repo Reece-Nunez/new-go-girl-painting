@@ -7,6 +7,7 @@ import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 config.autoAddCss = false;
 import Footer from "@/components/Footer";
+import FaqSection from "@/components/FaqSection";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -59,6 +60,7 @@ export default function RootLayout({
         >
           <Navbar />
           {children}
+          <FaqSection />
         </body>
         <Footer />
     </html>
