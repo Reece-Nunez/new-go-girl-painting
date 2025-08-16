@@ -101,8 +101,8 @@ export default function ContactPage() {
 
       {/* Optional Contact Info */}
       <section className="text-center text-sm text-gray-600 pb-20 px-4">
-        <p className="mb-1">📧 missy@gogirlpainting.com</p>
-        <p className="mb-1">📞 (555) 123-4567</p>
+        <p className="mb-1">📧 go-girlpainting@outlook.com</p>
+        <p className="mb-1">📞 (402) 303-2541</p>
         <p>🕒 Mon–Sat: 8am – 6pm</p>
       </section>
     </div>
