@@ -16,29 +16,30 @@ export default function Hero() {
       <div className="absolute inset-0 bg-black/50 z-0" />
 
       {/* Centered Content */}
-      <motion.div
+      <motion.header
         className="relative z-10 text-center px-6 max-w-5xl"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        <h1 className="text-4xl sm:text-6xl font-bold text-[var(--pink-brand)] drop-shadow-lg">
+        <h1 className="text-4xl sm:text-6xl font-bold text-[var(--pink-brand)] drop-shadow-lg mb-4">
           Welcome To Go-Girl Painting
         </h1>
-        <h1 className="text-3xl sm:text-5xl font-extrabold leading-tight text-white drop-shadow-md">
+        <h2 className="text-3xl sm:text-5xl font-extrabold leading-tight text-white drop-shadow-md mb-4">
           Professional Commercial and Residential Painting Services in the Greater Omaha Area
-        </h1>
-        <p className="text-md sm:text-lg mt-4 text-white drop-shadow-sm">
-          Specializing in cabinet, interior, and exterior painting for homes and businesses across Omaha, Bellevue, Papillion, and La Vista.
+        </h2>
+        <p className="text-md sm:text-lg mt-4 text-white drop-shadow-sm mb-6">
+          Specializing in <strong>cabinet</strong>, <strong>interior</strong>, and <strong>exterior painting</strong> for homes and businesses across <em>Omaha</em>, <em>Bellevue</em>, <em>Papillion</em>, and <em>La Vista</em>.
         </p>
 
         <Link
           href="/contact"
           className="inline-block bg-[var(--pink-brand)] hover:bg-pink-600 mt-6 text-white font-bold px-6 py-3 rounded-md text-sm shadow-lg transition"
+          aria-label="Get a free painting estimate from Go-Girl Painting"
         >
           Get a Free Quote
         </Link>
-      </motion.div>
+      </motion.header>
     </section>
   )
 }
