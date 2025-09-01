@@ -1,5 +1,3 @@
-'use client'
-
 import { Metadata } from 'next';
 import { businessInfo } from "@/lib/seo";
 
@@ -19,6 +17,8 @@ export const metadata: Metadata = {
     }]
   }
 };
+
+'use client'
 
 import { motion } from 'framer-motion'
 

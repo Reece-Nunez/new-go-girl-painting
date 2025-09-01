@@ -1,5 +1,3 @@
-'use client';
-
 import { Metadata } from 'next';
 import { businessInfo, seoKeywords } from "@/lib/seo";
 
@@ -25,6 +23,8 @@ export const metadata: Metadata = {
     }]
   }
 };
+
+'use client';
 
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
